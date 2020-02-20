@@ -36,10 +36,12 @@ service:
 ## Configure Ingress based on the documentation here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ##
 ingress:
-  enabled: false
-  annotations: {}
+  enabled: true
+  annotations: 
+    kubernetes.io/ingress.class: traefik
   tls: []
-  hosts: []
+  hosts: 
+    - adminer.local
   path: /
 
 resources: {}
